@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { CustomBtnComponent } from './customBtn/custom-btn.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, CustomBtnComponent],
   selector: 'ddd-pattern-root',
-  templateUrl: './app.component.html',
+  template: `
+    <main>
+      <router-outlet></router-outlet>
+      <ddd-pattern-custom-btn size="lg" />
+    </main>
+  `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {

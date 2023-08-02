@@ -2,7 +2,9 @@
   "name": "@ddd-pattern/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "commitlint": "commitlint"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.1.0",

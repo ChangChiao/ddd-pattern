@@ -1,0 +1,29 @@
+{
+  "ignoreFiles": ["**/*"],
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "extends": ["stylelint-config-standard-scss", "stylelint-config-idiomatic-order"],
+      "rules": {
+        "order/order": ["custom-properties", "declarations"],
+        "order/properties-alphabetical-order": null,
+        "color-function-notation": "legacy",
+        "no-empty-source": null,
+        "selector-type-no-unknown": [
+          true,
+          {
+            "ignore": ["custom-elements", "default-namespace"]
+          }
+        ],
+        "selector-pseudo-element-no-unknown": [
+          true,
+          {
+            "ignorePseudoElements": ["ng-deep"]
+          }
+        ],
+        "at-rule-empty-line-before": null
+      }
+    }
+  ],
+  "rules": {}
+}

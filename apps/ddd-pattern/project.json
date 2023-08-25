@@ -96,6 +96,13 @@
       "options": {
         "buildTarget": "ddd-pattern:build"
       }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/ddd-pattern"],
+      "options": {
+        "config": "apps/ddd-pattern/playwright.config.ts"
+      }
     }
   }
 }

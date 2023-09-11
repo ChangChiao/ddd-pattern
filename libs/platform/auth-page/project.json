@@ -1,0 +1,50 @@
+{
+  "name": "platform-auth-page",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/platform/auth-page/src",
+  "prefix": "ddd-pattern",
+  "tags": ["type:feature", "scope:platform"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/platform/auth-page/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/platform/auth-page/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/platform/auth-page/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/platform/auth-page/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/platform/auth-page/**/*.ts",
+          "libs/platform/auth-page/**/*.html"
+        ]
+      }
+    }
+  }
+}

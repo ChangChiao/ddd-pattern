@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ddd-pattern/platform/auth-page": [
+        "libs/platform/auth-page/src/index.ts"
+      ],
       "@ddd-pattern/shared/domain": ["libs/shared/domain/src/index.ts"]
     }
   },

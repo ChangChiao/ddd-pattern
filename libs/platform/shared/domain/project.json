@@ -1,0 +1,36 @@
+{
+  "name": "platform-shared-domain",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/platform/shared/domain/src",
+  "prefix": "ddd-pattern",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/platform/shared/domain/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/platform/shared/domain/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/platform/shared/domain/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/platform/shared/domain/**/*.ts",
+          "libs/platform/shared/domain/**/*.html"
+        ]
+      }
+    }
+  }
+}

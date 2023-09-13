@@ -18,6 +18,9 @@
       "@ddd-pattern/platform/auth-page": [
         "libs/platform/auth-page/src/index.ts"
       ],
+      "@ddd-pattern/platform/auth-page/feature/auth-page": [
+        "libs/platform/auth-page/feature/auth-page/src/index.ts"
+      ],
       "@ddd-pattern/platform/shared/domain": [
         "libs/platform/shared/domain/src/index.ts"
       ],

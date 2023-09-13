@@ -1,5 +1,5 @@
 {
-  "name": "@ddd-pattern/platform/auth-page",
+  "name": "@ddd-pattern/platform/auth-page/feature/auth-page",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^16.1.0",

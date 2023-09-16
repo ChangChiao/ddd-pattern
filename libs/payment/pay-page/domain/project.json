@@ -1,0 +1,36 @@
+{
+  "name": "payment-pay-page-domain",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/payment/pay-page/domain/src",
+  "prefix": "ddd-pattern",
+  "tags": ["type:domain", "scope:pay"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/payment/pay-page/domain/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/payment/pay-page/domain/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/payment/pay-page/domain/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/payment/pay-page/domain/**/*.ts",
+          "libs/payment/pay-page/domain/**/*.html"
+        ]
+      }
+    }
+  }
+}

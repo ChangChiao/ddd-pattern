@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ddd-pattern/payment/pay-page/domain": [
+        "libs/payment/pay-page/domain/src/index.ts"
+      ],
+      "@ddd-pattern/payment/pay-page/features/pay-page": [
+        "libs/payment/pay-page/features/pay-page/src/index.ts"
+      ],
       "@ddd-pattern/platform/auth-page": [
         "libs/platform/auth-page/src/index.ts"
       ],

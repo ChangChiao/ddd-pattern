@@ -101,6 +101,9 @@ devDependencies:
   '@nx/cypress':
     specifier: 17.0.2
     version: 17.0.2(@types/node@16.11.7)(cypress@13.0.0)(eslint@8.46.0)(nx@17.0.2)(typescript@5.1.6)
+  '@nx/eslint':
+    specifier: 17.0.2
+    version: 17.0.2(@types/node@16.11.7)(eslint@8.46.0)(nx@17.0.2)
   '@nx/eslint-plugin':
     specifier: 17.0.2
     version: 17.0.2(@types/node@16.11.7)(@typescript-eslint/parser@5.62.0)(eslint-config-prettier@9.0.0)(eslint@8.46.0)(nx@17.0.2)(typescript@5.1.6)
@@ -110,9 +113,6 @@ devDependencies:
   '@nx/js':
     specifier: 17.0.2
     version: 17.0.2(@types/node@16.11.7)(nx@17.0.2)(typescript@5.1.6)
-  '@nx/linter':
-    specifier: 17.0.2
-    version: 17.0.2(@types/node@16.11.7)(eslint@8.46.0)(nx@17.0.2)
   '@nx/playwright':
     specifier: 17.0.2
     version: 17.0.2(@playwright/test@1.37.1)(@types/node@16.11.7)(eslint@8.46.0)(nx@17.0.2)
@@ -182,9 +182,6 @@ devDependencies:
   nx:
     specifier: 17.0.2
     version: 17.0.2
-  nx-cloud:
-    specifier: 16.5.2
-    version: 16.5.2
   postcss:
     specifier: ^8.4.5
     version: 8.4.24
@@ -4033,14 +4030,6 @@ packages:
       - typescript
       - verdaccio
 
-  /@nrwl/nx-cloud@16.5.2:
-    resolution: {integrity: sha512-oHO5T1HRJsR9mbRd8eUqMBPCgqVZLSbAh3zJoPFmhEmjbM4YB9ePRpgYFT8dRNeZUOUd/8Yt7Pb6EVWOHvpD/w==}
-    dependencies:
-      nx-cloud: 16.5.2
-    transitivePeerDependencies:
-      - debug
-    dev: true
-
   /@nrwl/tao@17.0.2:
     resolution: {integrity: sha512-H+htIRzQR6Ibael34rhQkpNkpFFFmaSTsIzdqkBqL4j5+FzSpZh67NJnWSY8vsYQGQL8Ncc+MHvpQC+7pyfgGw==}
     hasBin: true
@@ -5972,16 +5961,6 @@ packages:
   /aws4@1.12.0:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
 
-  /axios@1.1.3:
-    resolution: {integrity: sha512-00tXVRwKx/FZr/IDVFt4C+f9FYairX517WoGCL6dpOntqLkZofjhu43F/Xl44UOpqa+9sLFDrG/XAnFsUYgkDA==}
-    dependencies:
-      follow-redirects: 1.15.2
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-    dev: true
-
   /axios@1.6.0:
     resolution: {integrity: sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==}
     dependencies:
@@ -7532,11 +7511,6 @@ packages:
   /dotenv-expand@10.0.0:
     resolution: {integrity: sha512-GopVGCpVS1UKH75VKHGuQFqS1Gusej0z4FyQkPdwjil2gNIv+LNsqBlboOzpJFZKVT95GkCyWJbBSdFEFUWI2A==}
     engines: {node: '>=12'}
-
-  /dotenv@10.0.0:
-    resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
-    engines: {node: '>=10'}
-    dev: true
 
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
@@ -11376,24 +11350,6 @@ packages:
   /nwsapi@2.2.7:
     resolution: {integrity: sha512-ub5E4+FBPKwAZx0UwIQOjYWGHTEq5sPqHQNRN8Z9e4A7u3Tj1weLJsL59yH9vmvqEtBHaOmT6cYQKIZOxp35FQ==}
 
-  /nx-cloud@16.5.2:
-    resolution: {integrity: sha512-1t1Ii9gojl8r/8hFGaZ/ZyYR0Cb0hzvXLCsaFuvg+EJEFdvua3P4cfNya/0bdRrm+7Eb/ITUOskbvYq4TSlyGg==}
-    hasBin: true
-    dependencies:
-      '@nrwl/nx-cloud': 16.5.2
-      axios: 1.1.3
-      chalk: 4.1.2
-      dotenv: 10.0.0
-      fs-extra: 11.1.1
-      node-machine-id: 1.1.12
-      open: 8.4.2
-      strip-json-comments: 3.1.1
-      tar: 6.1.11
-      yargs-parser: 21.1.1
-    transitivePeerDependencies:
-      - debug
-    dev: true
-
   /nx-stylelint@15.0.0(nx@17.0.2)(stylelint-config-standard-scss@10.0.0)(stylelint@15.10.3):
     resolution: {integrity: sha512-trgyW/aGtYGdfVmOmyHqL1WUm7IlG+v+OqcI9boUqNd5AzKzzOOXeK11UUzW8wn6H4XK20J9rQrqX/JA0oAZdA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >= 18.0.0}
@@ -14131,18 +14087,6 @@ packages:
       fs-constants: 1.0.0
       inherits: 2.0.4
       readable-stream: 3.6.2
-
-  /tar@6.1.11:
-    resolution: {integrity: sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==}
-    engines: {node: '>= 10'}
-    dependencies:
-      chownr: 2.0.0
-      fs-minipass: 2.1.0
-      minipass: 3.3.6
-      minizlib: 2.1.2
-      mkdirp: 1.0.4
-      yallist: 4.0.0
-    dev: true
 
   /tar@6.2.0:
     resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
